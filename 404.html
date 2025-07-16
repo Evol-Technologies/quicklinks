@@ -1,0 +1,22 @@
+<!-- super sigma quicklinks trick -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>FluxStuff</title>
+  <script>
+    const path = window.location.pathname;
+    const segments = path.split('/').filter(Boolean);
+    const key = segments.length > 0 ? segments[0] : null;
+    if (key) {
+      window.location.replace(`/index.html?key=${encodeURIComponent(key)}`);
+    } else {
+      window.location.replace('/index.html');
+    }
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
